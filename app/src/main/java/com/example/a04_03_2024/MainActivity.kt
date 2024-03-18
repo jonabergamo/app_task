@@ -1,4 +1,4 @@
-package com.example.basictaskapplication
+package com.example.a04_03_2024
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,13 +9,13 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import com.example.basictaskapplication.databinding.ActivityMainBinding
+import android.widget.TextView
+import com.example.a04_03_2024.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,9 +28,13 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            val text = "Hello World!"
+            val textView = view.findViewById<TextView>(R.id.textView2)
+            if(textView != null)
+                textView.setText(textView.text.toString())
+
         }
     }
 

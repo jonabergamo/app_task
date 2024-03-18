@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BasicTaskApplication"
+rootProject.name = "04-03-2024"
 include(":app")
+ 
