@@ -11,6 +11,12 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
         <Button
             android:id="@+id/button_all_tasks"
             android:layout_width="wrap_content"
